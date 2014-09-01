@@ -1,5 +1,6 @@
 require 'spec_helper'
 
+# rubocop:disable UselessAssignment
 describe ExpensesController do
   before do
     @user = create(:user)
@@ -76,13 +77,13 @@ describe ExpensesController do
       post :create, user_id: @user.id, expense: expense.attributes
 
       expect(response.status).to eq 400
-      expect(response).to render_template("new")
+      expect(response).to render_template('new')
     end
 
     it 'emails an email address after successful creation' do
       expense = build(:expense)
       email_body = "#{expense.name} by #{@user.full_name} needs to be approved"
-      email_address = "admin@expensr.com"
+      email_address = 'admin@expensr.com'
 
       expect(ExpenseMailer).to receive(:new)
         .with(address: email_address, body: email_body)
@@ -145,3 +146,4 @@ describe ExpensesController do
     end
   end
 end
+# rubocop:enable UselessAssignment
