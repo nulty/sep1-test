@@ -1,4 +1,19 @@
-# "Cleaning Up a Controller" Exercise
+# Instructions for coding test
+
+You will need a desktop machine with Ruby 2.1.2 and Postgres installed. If
+either of these are not possible, after cloning the repo make the necessary
+changes to `Gemfile` and `config/database.yml`. The test does not depend
+on any Ruby 2.1.x or database-specific code.
+
+## To install
+
+```
+git clone git@github.com:evvnt/sep1-test.git
+cd sep1-test
+./bin/setup
+```
+
+## The exercise
 
 In this exercise, you'll be cleaning up controller called
 `ExpensesController`. This controller can do a few things:
@@ -10,21 +25,19 @@ In this exercise, you'll be cleaning up controller called
 * Change name or amount unapproved expenses
 * Mark expenses as deleted
 
-## Exercise!
-
-Before you get started, make sure you run `./bin/setup` to install gems
-and set up your database.
-
-You're going to want to do a few things to the existing controller code:
+Your task is to refactor the controller code.
 
 * All public methods should be as RESTful as possible
 * Make sure the only logic that lives in your controller is related to handling
 your requests and responses
-* Apply other techniques from previous exercises and tutorials to clean up this
-controller as much as possible
 
-Test any new classes you write for this exercise.
+You may add new classes of any description to assist you. Any new classes
+should have accompanying tests.
 
 Make sure all tests are passing by running:
 
 `rake`
+
+**There is no time limit for this test.**
+
+_Test is based on an exercise provided on [Upcase by Thoughtbot](http://upcase.com/)._

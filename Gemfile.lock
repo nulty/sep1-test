@@ -120,5 +120,5 @@ DEPENDENCIES
   flutie
   pg
   rack-timeout
-  rails (>= 4.0.0)
+  rails (>= 4.1.1)
   rspec-rails (>= 2.14)
